@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0;}
+        h1,h2{
+            color: red; 
+            text-align: center;
+            border: solid black;}
+            img{width: 600px;}
+            p.blueText{text-align: right;}
+            .blueText{color: blue; font-size: 15px;} /*classs 선택자*/
+            #main{width: 800px; height: 600px; margin: 0 auto; border: 1px solid black;}
+            ul{list-style-type: square;}/*disc, circle, squre, none*/
