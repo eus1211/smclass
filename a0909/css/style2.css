@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+*{margin: 0; padding: 0; text-decoration: none; color: inherit;
+list-style: none;
+font-family: "Noto Sans KR", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;}
+a{text-decoration: none; color: inherit;}
+ul,ol{list-style: none;}
+#head{width: 100%; height: 35px; background: #202020;}
+#head ul{font-size:13px ; color: white; display: flex; margin-top: 7px; float: right; width: 500px; margin-right: 100px;}
+#head li{width:110px; height: 17px; text-align: center; border-left: 1px solid white; box-sizing: border-box;}
+#head_menu1{width: 80px;}
+#head_menu2{width: 70px;}
+#head_menu3{width: 100px;}
+#head_menu4{width: 100px;}
+#head_menu5{border-right: 1px solid white;}
+nav{width: 100%; height: 82px; display: flex;}
+#logo{width: 150px; height: 82px; box-sizing: border-box; padding-top: 25px; padding-left: 40px;}
+#logo h1{width: 100px; height: 30px; background: url('../images/ico_set.png')-320px -385px no-repeat ;
+        background-size: 800px 800px; box-sizing: border-box; }
+#menu{width: 80%; height: 82px;}
+#menu ul{display: flex; width: 650px; height: 82px; margin: 0 auto; padding-top: 25px; text-align: center;
+        box-sizing: border-box;}
+#menu li{width: 160px;}
+#menu li:hover{border-bottom: 3px solid black;}
+#menu3{width: 100px;}
+#menu4{width: 110px;}
+#menu5{width: 120px;}
+#menu a{font-size: 22px; font-weight: 700; color: #101010;}
+#quick_menu{width: 200px; height: 82px; text-align: center;}
+#quick_menu ul{display: flex; width: 130px; height: 52px; margin-top: 15px;}
+#quick_menu li{width: 62px; height: 52px; font-size: 12px; font-weight: 700; color: #101010;}
+#quick_menu .quick_menu1{width: 32px; height: 32px; display: inline-block; background: url('../images/ico_set.png') -584px -320px no-repeat; background-size: 800px 800px;}
+#quick_menu div{width: 50px; height: 20px; position: relative; left: -10px; top: 30px; }
+#quick_menu .quick_menu2{width: 32px; height: 32px; display: inline-block; background: url('../images/ico_set.png') -628px -320px no-repeat; background-size: 800px 800px;}
+section #banner{ width: 100%; height: 600px;
+    background: url('../images/main_top.jpg')no-repeat;
+    background-size:cover ; box-sizing: border-box; padding: 70px 0 0 370px;}
