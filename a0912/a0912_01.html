@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .main{width: 200px; height: 200px; border: 1px solid black;
+            margin: 50px auto;
+            /* perspective: 200px; 원근감*/
+        }
+        .move{transition: 0.5s all ease-in;}
+        .move:hover{
+            /*trasform: traslate(0,100px); 이동*/
+            /*trasform: sclae(1.5); 크기변형*/
+            /*transform: rotate(360deg);*/
+            /*transform-origin: left top;*/
+            transform: rotateX(180deg);
+            /*transform: rotateY(180deg);회전
+            transform: skewX(-360deg);
+            transform: skewY(-360deg);*/
+            backface-visibility: visible;
+        }
+        .move img{width: 100%;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="move">
+            <img src="images/c01.png">
+        </div>
+        <div class="move">
+            <img src="images/car02.jpg">
+        </div>
+    </div>
+</body>
+</html>
