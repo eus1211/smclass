@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <script>
+        //제이쿼리
+        $(function(){
+            //정규 표현식
+            // / / - 시작
+            // [] - 체크타입을 넣어줌 a-z 0-9 A-Z
+            // {} - 자리수는 중괄호 안에 넣어줌
+            // ^  - 시작을 의미
+            // $  - 끝을 의미
+            // \d - [0-9]와 같음 숫자만 입력 가능
+            //    -| 또는
+            //    -? 1개가 조건에 맞는지 확인
+            // \특수기호 - 특수기호 등
+            // . - 모든 문자열(단, 줄바꿈 X)
+            let id_pattern= /^[a-zA-Z]{3,}$/;
+            let name_pattern= /^[ㄱ-ㅎ가-힣]{2,}$/;
+            let id2_pattern= /^[a-z]{1}[a-zA-Z0-9]{1,7}$/;
+            let tel_pattern= /^[0-9]{2,3}-[0-9]{3,4}-\d{4}$/;
+            //let phone_pattern= /^(010|011)-[0-9]{3,4}-[0-9]{4}$/;
+            let phone_pattern= /^01([0|1|6|7|9]?)-[0-9]{3,4}-[0-9]{4}$/;
+            
+            
+            
+            
+            $("#membership").click(function(){
+
+                //핸드폰번호 체크
+                if(!phone_pattern.test($("#phone").val())){
+                    alert("010,011(3)-번호(3,4)-\n전화번호4자리를 입력 가능")
+                    return false;
+                }else{alert("성공")}
+                
+                //전화번호 체크
+                // if(!tel_pattern.test($("#tel").val())){
+                //     alert("지역번호(02,051)-국번(3,4)-전화번호4자리를 입력 가능")
+                //     return false;
+                // }else{alert("성공")}
+
+                /*이름 체크
+                if(!id2_pattern.test($("#id2").val())){
+                    alert("첫째자리는 영문소문자가능, \n둘째자리 이상부터는 영문대소문자,숫자 2자리이상, 8자리이하 가능")
+                    return false;
+                }else{alert("성공")}*/
+                
+                // if(!name_pattern.test($("#name").val())){
+                //     alert("이름은 한글 2자리 이상만 가능")
+                //     return false;
+                // }else{alert("성공")}
+
+                //아이디 체크
+                // if(!id_pattern.test($("#id").val())){
+                //     alert("아이디는 영문자 3자리 이상만 가능")
+                //     return false;
+                // }else{alert("성공")}
+                
+                // 3자리 영문자 체크
+                // let count=0;
+                // let eng = $("#eng").val(); //3자리 aaa~
+                // for(let i=0;i<eng.length;i++){
+                //     if (!(eng[i]>='a' && eng[i]<='z')){alert("영문자입니다.")
+                //     count++;
+                //     } if(count>0){
+                //         alert("영문자가 아닙니다.");
+                //         return false;
+                //     }
+                    
+                // }
+                // $eng("#eng").val()[i]>='a'
+                // if($("#eng").val()>='a' && $("#eng").val()<="z" || $("#eng").val().length<3 ){
+                //     alert("영문자입니다.")
+                // }else{alert("영문자이며 3자리 이상쓰시오.")}
+
+                //숫자 / 4자리 이상 입력
+                // if(isNaN($("#number").val()) || $("#number").val().length<4){
+                //     alert("4자리 이상의 숫자로만 가능");
+                //     return false;}
+                
+                // if(isNaN($("#number").val())){
+                //     alert("숫자만 가능")
+
+                // }
+                // if($("#id").val() ==""){
+                //     alert("아이디를 입력하세요.")
+                //     return false;}
+                // //아이디가 3자리 이상이 아니면 3자리 이상 입력하셔야합니다.
+                // if($("#id").val().length<3){
+                //     alert("3자리 이상 입력하세요.")
+                //     return false;}
+                //number가 숫자인지 체크 - 제이쿼리 문법
+                // $("#number").val()
+                // if(!$.isNumeric($("#number").val())){
+                //     alert("숫자만 가능함");
+                //     return false;}
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="#" name="frm" method="post">
+        <label>아이디</label>
+        <input type="text" name="id" id="id">
+        <span>아이디는 영문자 3자리이상 가능</span><br>
+        <label>아이디2</label>
+        <input type="text" name="id2" id="id2">
+        <span>첫째자리는 영문소문자가능, 둘째자리 이상부터는 영문대소문자,숫자 2자리이상, 8자리이하 가능</span><br>
+        <label>이름</label>
+        <input type="text" name="name" id="name">
+        <span>이름은 한글 2자리 이상</span><br>
+        <label>전화번호</label>
+        <input type="text" name="tel" id="tel">
+        <span>지역번호(02,051)-국번(3,4)-전화번호4자리를 입력 가능</span><br>
+        <label>핸드폰번호</label>
+        <input type="text" name="phone" id="phone">
+        <span>010,011(3)-번호(3,4)-전화번호4자리를 입력 가능</span><br>
+        <button type="button" id="membership">확인</button>
+    </form>
+    
+</body>
+</html>
